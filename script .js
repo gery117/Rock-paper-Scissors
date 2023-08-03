@@ -43,3 +43,34 @@ function playRound(playerSelection,computerSelection){
 const playerSelection = getPlayerChoice()
 const computerSelection = getComputerChoice();
 
+if(playerSelection === rock && computerSelection === paper){
+    alert("you lose paper beats rock")
+}
+else if(playerSelection === rock && computerSelection === scissors){
+    alert("you win rock beats scissors")
+}
+else if(playerSelection === rock && computerSelection === rock){
+    alert("its a tie")
+}
+
+else if (playerSelection === paper && computerSelection === rock){
+    alert(" you win paper beats rock")
+}
+else if (playerSelection === paper && computerSelection === scissors){
+    alert("you lose scissors beats paper")
+}
+else if (playerSelection === paper && computerSelection === paper){
+    alert("its a tie")
+}
+
+else if (playerSelection ===scissors && computerSelection === paper){
+    alert("you win scissors beats paper")
+}
+else if (playerSelection ===scissors && computerSelection === rock){
+    alert("you lose rock beats scissors")
+}
+else if (playerSelection ===scissors && computerSelection === scissors){
+    alert("its a tie")
+}
+
+console.log(playRound(playerSelection,computerSelection));
