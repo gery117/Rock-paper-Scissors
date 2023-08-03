@@ -36,7 +36,10 @@ function playRound(playerSelection,computerSelection){
         return userChoice
     }
     
-    getPlayerChoice()
+    // getPlayerChoice()
 
 }
+
+const playerSelection = getPlayerChoice()
+const computerSelection = getComputerChoice();
 
