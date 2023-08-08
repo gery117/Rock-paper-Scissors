@@ -1,44 +1,4 @@
 
-// function playRound(playerSelection,computerSelection){
-
-    
-
-    // if(playerSelection === rock && computerSelection === paper){
-    // alert("you lose paper beats rock")
-    // }
-    // else if(playerSelection === rock && computerSelection === scissors){
-    // alert("you win rock beats scissors")
-    // }
-    // else if(playerSelection === rock && computerSelection === rock){
-    //     alert("its a tie")
-    // }
-
-    // else if (playerSelection === paper && computerSelection === rock){
-    //     alert(" you win paper beats rock")
-    // }
-    // else if (playerSelection === paper && computerSelection === scissors){
-    //     alert("you lose scissors beats paper")
-    // }
-    // else if (playerSelection === paper && computerSelection === paper){
-    //     alert("its a tie")
-    // }
-
-    // else if (playerSelection ===scissors && computerSelection === paper){
-    //     alert("you win scissors beats paper")
-    // }
-    // else if (playerSelection ===scissors && computerSelection === rock){
-    //     alert("you lose rock beats scissors")
-    // }
-    // else if (playerSelection ===scissors && computerSelection === scissors){
-    //     alert("its a tie")
-    // }
-
-// }
-//     const playerSelection = getPlayerChoice();
-//     const computerSelection = getComputerChoice();
-
-// console.log(playRound(playerSelection,computerSelection));
-
 function getComputerChoice(){
     // var choice = Math.floor(Math.random()*3);
     // console.log(choice);
@@ -46,7 +6,7 @@ function getComputerChoice(){
     // var options = ["rock", "paper", "scissors"];
     // var number = Math.floor(Math.random()*options.length)
     // var choice = options[number]
-    // console.log(choice);
+    // console.log(choice); 
 
     let options = ["rock", "paper", "scissors"];
     let choice = Math.floor(Math.random()*options.length);
@@ -68,6 +28,7 @@ function getComputerChoice(){
 }
 // getComputerChoice(); 
 
+
 function getPlayerChoice(){
     let userChoice = prompt("please enter a choice",).toLowerCase();
     // console.log(userChoice);
@@ -76,43 +37,49 @@ function getPlayerChoice(){
 
 // getPlayerChoice();
 
+
 let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
 console.log(computerSelection);
-console.log(playerSelection)
+console.log(playerSelection);
+
+function playRound(_x,_y){
+ 
+    if(playerSelection === "rock" && computerSelection === "paper"){
+        alert("you lose paper beats rock")
+    }
+    else if(playerSelection === "rock" && computerSelection === "scissors"){
+        alert("you win rock beats scissors")
+    }
+    else if(playerSelection === "rock" && computerSelection === "rock"){
+            alert("its a tie")
+    }
+    
+    else if (playerSelection === "paper" && computerSelection === "rock"){
+            alert(" you win paper beats rock")
+    }
+    else if (playerSelection === "paper" && computerSelection === "scissors"){
+            alert("you lose scissors beats paper")
+    }
+    else if (playerSelection === "paper" && computerSelection === "paper"){
+            alert("its a tie")
+    }
+    
+    else if (playerSelection ==="scissors" && computerSelection === "paper"){
+            alert("you win scissors beats paper")
+    }
+     else if (playerSelection ==="scissors" && computerSelection === "rock"){
+            alert("you lose rock beats scissors")
+    }
+     else if (playerSelection ==="scissors" && computerSelection === "scissors"){
+            alert("its a tie")
+    }
+    else{
+        alert("please only write rock, paper or scissors" )
+    }
 
 
-
-if(playerSelection === "rock" && computerSelection === "paper"){
-    alert("you lose paper beats rock")
-}
-else if(playerSelection === "rock" && computerSelection === "scissors"){
-    alert("you win rock beats scissors")
-}
-else if(playerSelection === "rock" && computerSelection === "rock"){
-        alert("its a tie")
 }
 
-else if (playerSelection === "paper" && computerSelection === "rock"){
-        alert(" you win paper beats rock")
-}
-else if (playerSelection === "paper" && computerSelection === "scissors"){
-        alert("you lose scissors beats paper")
-}
-else if (playerSelection === "paper" && computerSelection === "paper"){
-        alert("its a tie")
-}
-
-else if (playerSelection ==="scissors" && computerSelection === "paper"){
-        alert("you win scissors beats paper")
-}
- else if (playerSelection ==="scissors" && computerSelection === "rock"){
-        alert("you lose rock beats scissors")
-}
- else if (playerSelection ==="scissors" && computerSelection === "scissors"){
-        alert("its a tie")
-}
-else{
-    alert("please only write rock, paper or scissors" )
-}
+console.log(playRound(playerSelection,computerSelection));
