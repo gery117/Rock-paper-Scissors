@@ -41,39 +41,50 @@ function getPlayerChoice(){
 let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
-console.log(computerSelection);
-console.log(playerSelection);
+// console.log(computerSelection);
+// console.log(playerSelection);
 
 function playRound(_x,_y){
+
+ 
  
     if(playerSelection === "rock" && computerSelection === "paper"){
-        alert("you lose paper beats rock")
+        alert("you lose paper beats rock");
+        console.log("you lose paper beats rock");
     }
     else if(playerSelection === "rock" && computerSelection === "scissors"){
-        alert("you win rock beats scissors")
+        alert("you win rock beats scissors");
+        console.log("you win rock beats scissors");
     }
     else if(playerSelection === "rock" && computerSelection === "rock"){
-            alert("its a tie")
+            alert("its a tie");
+            console.log("its a tie");
     }
     
     else if (playerSelection === "paper" && computerSelection === "rock"){
             alert(" you win paper beats rock")
+            console.log(" you win paper beats rock");
     }
     else if (playerSelection === "paper" && computerSelection === "scissors"){
-            alert("you lose scissors beats paper")
+            alert("you lose scissors beats paper");
+            console.log("you lose scissors beats paper");
     }
     else if (playerSelection === "paper" && computerSelection === "paper"){
-            alert("its a tie")
+            alert("its a tie");
+            console.log("its a tie");
     }
     
     else if (playerSelection ==="scissors" && computerSelection === "paper"){
-            alert("you win scissors beats paper")
+            alert("you win scissors beats paper");
+            console.log("you win scissors beats paper");
     }
      else if (playerSelection ==="scissors" && computerSelection === "rock"){
-            alert("you lose rock beats scissors")
+            alert("you lose rock beats scissors");
+            console.log("you lose rock beats scissors");
     }
      else if (playerSelection ==="scissors" && computerSelection === "scissors"){
-            alert("its a tie")
+            alert("its a tie");
+            console.log("its a tie");
     }
     else{
         alert("please only write rock, paper or scissors" )
@@ -82,4 +93,15 @@ function playRound(_x,_y){
 
 }
 
-console.log(playRound(playerSelection,computerSelection));
+(playRound(playerSelection,computerSelection));
+
+// let gameResult = playRound(playerSelection,computerSelection);
+// console.log(gameResult);
+
+// function game(){
+//     for (i = 0; i < 5; i++){
+//         playRound(playerSelection,computerSelection);
+//     }
+// }
+
+// game();
