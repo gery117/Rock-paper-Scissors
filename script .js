@@ -26,27 +26,35 @@ function getComputerChoice(){
     return choice
 
 }
+
 // getComputerChoice(); 
 
 
-function getPlayerChoice(){
-    let userChoice = prompt("please enter a choice",).toLowerCase();
-    // console.log(userChoice);
-    return userChoice
-}
+// function getPlayerChoice(){
+//     let userChoice = prompt("please enter a choice",).toLowerCase();
+//     // console.log(userChoice);
+//     return userChoice
+// }
 
 // getPlayerChoice();
 
 
-let computerSelection = getComputerChoice();
-let playerSelection = getPlayerChoice();
+// let computerSelection = getComputerChoice();
+// let playerSelection = getPlayerChoice();
 
 // console.log(computerSelection);
 // console.log(playerSelection);
 
-function playRound(_x,_y){
+let computerSelection;
+let playerSelection;
 
- 
+function playRound(playerSelection,computerSelection){
+
+    let userChoice = prompt("please enter a choice",).toLowerCase();
+
+    playerSelection = userChoice;
+
+    computerSelection = getComputerChoice()
  
     if(playerSelection === "rock" && computerSelection === "paper"){
         alert("you lose paper beats rock");
@@ -93,15 +101,38 @@ function playRound(_x,_y){
 
 }
 
-(playRound(playerSelection,computerSelection));
+// function game(){
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+
+// }
+
+// game();
+
+
+function game(){
+    for(i=0; i<5; i++){
+        playRound(playerSelection,computerSelection);
+    }
+}
+
+game();
+
 
 // let gameResult = playRound(playerSelection,computerSelection);
 // console.log(gameResult);
 
 // function game(){
-//     for (i = 0; i < 5; i++){
-//         playRound(playerSelection,computerSelection);
-//     }
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+//     playRound(playerSelection,computerSelection);
+
 // }
+        
 
 // game();
