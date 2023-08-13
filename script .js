@@ -39,12 +39,6 @@ function getComputerChoice(){
 // getPlayerChoice();
 
 
-// let computerSelection = getComputerChoice();
-// let playerSelection = getPlayerChoice();
-
-// console.log(computerSelection);
-// console.log(playerSelection);
-
 let computerSelection;
 let playerSelection;
 let playerScore;
@@ -140,19 +134,3 @@ function game(){
 }
 
 game();
-
-
-// let gameResult = playRound(playerSelection,computerSelection);
-// console.log(gameResult);
-
-// function game(){
-//     playRound(playerSelection,computerSelection);
-//     playRound(playerSelection,computerSelection);
-//     playRound(playerSelection,computerSelection);
-//     playRound(playerSelection,computerSelection);
-//     playRound(playerSelection,computerSelection);
-
-// }
-        
-
-// game();
