@@ -47,6 +47,9 @@ function getComputerChoice(){
 
 let computerSelection;
 let playerSelection;
+let playerScore;
+let computerScore;
+
 
 function playRound(playerSelection,computerSelection){
 
@@ -59,10 +62,12 @@ function playRound(playerSelection,computerSelection){
     if(playerSelection === "rock" && computerSelection === "paper"){
         alert("you lose paper beats rock");
         console.log("you lose paper beats rock");
+        computerScore ++
     }
     else if(playerSelection === "rock" && computerSelection === "scissors"){
         alert("you win rock beats scissors");
         console.log("you win rock beats scissors");
+        playerScore ++
     }
     else if(playerSelection === "rock" && computerSelection === "rock"){
             alert("its a tie");
@@ -72,10 +77,12 @@ function playRound(playerSelection,computerSelection){
     else if (playerSelection === "paper" && computerSelection === "rock"){
             alert(" you win paper beats rock")
             console.log(" you win paper beats rock");
+            playerScore ++
     }
     else if (playerSelection === "paper" && computerSelection === "scissors"){
             alert("you lose scissors beats paper");
             console.log("you lose scissors beats paper");
+            computerScore ++
     }
     else if (playerSelection === "paper" && computerSelection === "paper"){
             alert("its a tie");
@@ -85,10 +92,12 @@ function playRound(playerSelection,computerSelection){
     else if (playerSelection ==="scissors" && computerSelection === "paper"){
             alert("you win scissors beats paper");
             console.log("you win scissors beats paper");
+            playerScore ++
     }
      else if (playerSelection ==="scissors" && computerSelection === "rock"){
             alert("you lose rock beats scissors");
             console.log("you lose rock beats scissors");
+            computerScore ++
     }
      else if (playerSelection ==="scissors" && computerSelection === "scissors"){
             alert("its a tie");
@@ -114,8 +123,19 @@ function playRound(playerSelection,computerSelection){
 
 
 function game(){
+    playerScore = 0
+    computerScore = 0
+
     for(i=0; i<5; i++){
         playRound(playerSelection,computerSelection);
+    }
+
+    if(playerScore > computerScore) {
+    console.log(`you win! you: ${playerScore} computer: ${computerScore}`)
+    } 
+    else{
+    console.log(`you lose! you: ${playerScore} computer: ${computerScore}`)
+
     }
 }
 
